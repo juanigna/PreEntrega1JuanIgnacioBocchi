@@ -1,3 +1,7 @@
 .nav-logo {
     max-width: 3em;
 }
+
+.nav-cart {
+    cursor: pointer;
+}

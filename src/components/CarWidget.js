@@ -1,11 +1,11 @@
 import React from 'react';
-import Logo from '../assets/flower.png';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import '../App.css';
 
 const CarWidget = () => {
     return (
         <>
-            <img className="nav-logo navbar-brand" src={Logo} alt="logo" />
+            <ShoppingCartIcon className="nav-cart" />
         </>
     );
 };
