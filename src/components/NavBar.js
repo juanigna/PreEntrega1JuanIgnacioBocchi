@@ -6,8 +6,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Logo from '../assets/flower.png';
 import '../App.css';
+import NavItem from './NavItem';
 
 const pages = ['Home', 'Productos', 'Acerca de nosotros'];
+
+//Componente encargado del NavBar
 
 const NavBar = () => {
     return (
@@ -25,7 +28,7 @@ const NavBar = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="align-items-center ms-auto gap-3 me-3">
                             {pages.map((el, index) => {
-                                return <Nav.Link href="#">{el}</Nav.Link>;
+                                return <NavItem item={el} />;
                             })}
                             <CarWidget />
                         </Nav>
