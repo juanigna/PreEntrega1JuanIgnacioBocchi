@@ -23,12 +23,12 @@ const NavBar = () => {
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="ms-auto gap-3 me-3">
+                        <Nav className="align-items-center ms-auto gap-3 me-3">
                             {pages.map((el, index) => {
                                 return <Nav.Link href="#">{el}</Nav.Link>;
                             })}
+                            <CarWidget />
                         </Nav>
-                        <CarWidget />
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
