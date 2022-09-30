@@ -14,8 +14,13 @@ const Item = ({ products }) => {
                     <Card
                         key={index}
                         style={{ width: '18rem', margin: '0 auto' }}
+                        className="card"
                     >
-                        <Card.Img variant="top" src="holder.js/100px180" />
+                        <Card.Img
+                            variant="top"
+                            className="card-img"
+                            src={product.prod_img}
+                        />
                         <Card.Body>
                             <Card.Title>{product.name}</Card.Title>
                             <Card.Text>{product.description}</Card.Text>

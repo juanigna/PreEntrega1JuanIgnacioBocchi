@@ -4,3 +4,9 @@
     align-items: center;
     width: 100%;
 }
+
+.card-img {
+    max-height: 400px;
+    object-fit: contain;
+    width: 100%;
+}
