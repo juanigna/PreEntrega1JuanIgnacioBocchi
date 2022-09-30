@@ -28,7 +28,7 @@ const NavBar = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="align-items-center ms-auto gap-3 me-3">
                             {pages.map((el, index) => {
-                                return <NavItem item={el} />;
+                                return <NavItem key={index} item={el} />;
                             })}
                             <CarWidget />
                         </Nav>
