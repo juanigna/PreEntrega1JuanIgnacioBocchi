@@ -14,3 +14,33 @@
     transform: scale(1.1);
     transition: all 0.3s ease;
 }
+
+/*Detail contaier css*/
+
+.detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1em;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    place-content: center;
+    margin: 1em auto;
+}
+
+.detail-img {
+    max-width: 150px;
+    object-fit: contain;
+}
+.left-column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

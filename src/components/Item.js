@@ -12,7 +12,7 @@ const Item = ({ products }) => {
             <div className="product-container gap-3">
                 {products.map((product, index) => (
                     <Card
-                        key={index}
+                        key={product.id}
                         style={{ width: '18rem', margin: '0 auto' }}
                         className="card"
                     >
