@@ -5,7 +5,10 @@ import '../App.css';
 const CarWidget = () => {
     return (
         <>
-            <ShoppingCartIcon className="nav-cart" />
+            <div className="cart-container">
+                <ShoppingCartIcon className="nav-cart" />
+                <span className="cart-amount">7</span>
+            </div>
         </>
     );
 };
