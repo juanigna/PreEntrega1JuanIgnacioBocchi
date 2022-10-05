@@ -10,7 +10,7 @@ function App() {
                 <NavBar />
             </header>
             <ItemListContainer greeting="Saludos! Gracias por entrar a mi pagina!!!" />
-            <ItemDetailContainer id={3} />
+            <ItemDetailContainer id={1} />
         </div>
     );
 }
