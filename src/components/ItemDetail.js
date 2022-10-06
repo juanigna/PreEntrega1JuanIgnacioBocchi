@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
+import ItemCount from './ItemCount';
 
 const ItemDetail = ({ producto }) => {
     return (
@@ -12,14 +12,7 @@ const ItemDetail = ({ producto }) => {
                         {producto.description}
                     </h2>
                     <h3>Precio: ${producto.price}</h3>
-                    <div className="detail-buy">
-                        <div className="detail-buy-buttons">
-                            <Button> - </Button>
-                            <input type="number" readonly value={1} />
-                            <Button> + </Button>
-                        </div>
-                        <Button variant="primary">Agregar al carrito</Button>
-                    </div>
+                    <ItemCount initialStock={1} maxLimit={8} />
                 </div>
                 <div className="right-column">
                     <img

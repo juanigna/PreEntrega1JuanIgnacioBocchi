@@ -15,18 +15,18 @@ function App() {
                     <Route
                         path="/"
                         element={
-                            <ItemListContainer greeting="Saludos! Gracias por entrar a mi pagina!!!" />
+                            <ItemListContainer greeting="Gracias por entrar a mi pagina!!!" />
                         }
                     />
                     <Route
                         path="/category/:categoryName"
                         element={
-                            <ItemListContainer greeting="Saludos! Gracias por entrar a mi pagina!!!" />
+                            <ItemListContainer greeting="Gracias por entrar a mi pagina!!!" />
                         }
                     />
                     <Route
-                        path="/item"
-                        element={<ItemDetailContainer id={1} />}
+                        path="/item/:itemId"
+                        element={<ItemDetailContainer />}
                     />
                 </Routes>
             </div>
