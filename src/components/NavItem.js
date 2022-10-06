@@ -1,13 +1,14 @@
 import React from 'react';
-import Nav from 'react-bootstrap/Nav';
+import '../App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavLink } from 'react-router-dom';
 
 //Componente encargado del Item del navbar
 
-const NavItem = (props) => {
+const NavItem = () => {
     return (
         <>
-            <Nav.Link href="#">{props.item}</Nav.Link>
+            <NavLink to="/nosotros">Nosotros</NavLink>
         </>
     );
 };

@@ -8,10 +8,12 @@ import ItemList from './ItemList';
 const ItemListContainer = ({ greeting }) => {
     return (
         <>
-            <Container className="mt-4">
-                <Alert variant="info">{greeting}</Alert>
-                <ItemList />
-            </Container>
+            <main>
+                <Container className="mt-4">
+                    <Alert variant="info">{greeting}</Alert>
+                    <ItemList />
+                </Container>
+            </main>
         </>
     );
 };

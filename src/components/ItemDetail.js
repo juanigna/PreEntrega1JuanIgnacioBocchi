@@ -12,7 +12,14 @@ const ItemDetail = ({ producto }) => {
                         {producto.description}
                     </h2>
                     <h3>Precio: ${producto.price}</h3>
-                    <Button variant="primary">Agregar al carrito</Button>
+                    <div className="detail-buy">
+                        <div className="detail-buy-buttons">
+                            <Button> - </Button>
+                            <input type="number" readonly value={1} />
+                            <Button> + </Button>
+                        </div>
+                        <Button variant="primary">Agregar al carrito</Button>
+                    </div>
                 </div>
                 <div className="right-column">
                     <img

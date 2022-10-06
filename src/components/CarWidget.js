@@ -7,7 +7,9 @@ const CarWidget = () => {
         <>
             <div className="cart-container">
                 <ShoppingCartIcon className="nav-cart" />
-                <span className="cart-amount">7</span>
+                <div className="cart-amount">
+                    <span>7</span>
+                </div>
             </div>
         </>
     );
