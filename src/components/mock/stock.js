@@ -10,6 +10,7 @@ const stock = [
         description: 'Crema Ekos Natura de 75g',
         price: 3000,
         prod_img: cremaEkos,
+        category: 'cremas',
     },
     {
         id: 2,
@@ -17,6 +18,7 @@ const stock = [
         description: 'Perfuma de alta gama',
         price: 13000,
         prod_img: ekosPerfume,
+        category: 'perfumes',
     },
     {
         id: 3,
@@ -24,6 +26,7 @@ const stock = [
         description: 'Escencial para tu cuidado diario',
         price: 4060,
         prod_img: kitLimpieza,
+        category: 'limpieza',
     },
     {
         id: 4,
@@ -31,6 +34,7 @@ const stock = [
         description: 'Desodorante en roll',
         price: 790,
         prod_img: desodorante,
+        category: 'limpieza',
     },
 ];
 

@@ -19,6 +19,12 @@ function App() {
                         }
                     />
                     <Route
+                        path="/category/:categoryName"
+                        element={
+                            <ItemListContainer greeting="Saludos! Gracias por entrar a mi pagina!!!" />
+                        }
+                    />
+                    <Route
                         path="/item"
                         element={<ItemDetailContainer id={1} />}
                     />
