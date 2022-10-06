@@ -12,7 +12,7 @@ const ItemDetail = ({ producto }) => {
                         {producto.description}
                     </h2>
                     <h3>Precio: ${producto.price}</h3>
-                    <ItemCount initialStock={1} maxLimit={8} />
+                    <ItemCount initialStock={1} maxLimit={producto.stock} />
                 </div>
                 <div className="right-column">
                     <img

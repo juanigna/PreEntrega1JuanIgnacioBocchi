@@ -11,6 +11,7 @@ const stock = [
         price: 3000,
         prod_img: cremaEkos,
         category: 'cremas',
+        stock: 5,
     },
     {
         id: 2,
@@ -19,6 +20,7 @@ const stock = [
         price: 13000,
         prod_img: ekosPerfume,
         category: 'perfumes',
+        stock: 8,
     },
     {
         id: 3,
@@ -27,6 +29,7 @@ const stock = [
         price: 4060,
         prod_img: kitLimpieza,
         category: 'limpieza',
+        stock: 10,
     },
     {
         id: 4,
@@ -35,6 +38,7 @@ const stock = [
         price: 790,
         prod_img: desodorante,
         category: 'limpieza',
+        stock: 3,
     },
 ];
 
