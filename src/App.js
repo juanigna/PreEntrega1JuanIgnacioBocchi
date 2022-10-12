@@ -4,6 +4,7 @@ import ItemListContainer from './components/Main/ItemListContainer';
 import NavBar from './components/Header/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Form from './components/Form/Form';
+import Cart from './components/Cart/Cart';
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
                         element={<ItemDetailContainer />}
                     />
                     <Route path="/form" element={<Form />} />
+                    <Route path="/cart" element={<Cart />} />
                 </Routes>
             </div>
         </BrowserRouter>
