@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import '../App.css';
+import '../../App.css';
 import { useState } from 'react';
 
-const ItemCount = ({ initialStock, maxLimit }) => {
+const ItemCount = ({ initialStock, maxLimit, onAdd }) => {
     const [stock, setStock] = useState(initialStock);
 
     const incrementar = () => {
@@ -18,10 +18,12 @@ const ItemCount = ({ initialStock, maxLimit }) => {
         <div className="detail-buy">
             <div className="detail-buy-buttons">
                 <Button onClick={decrementar}> - </Button>
-                <input type="number" readonly value={stock} />
+                <input type="number" readOnly value={stock} />
                 <Button onClick={incrementar}> + </Button>
             </div>
-            <Button variant="primary">Agregar al carrito</Button>
+            <Button onClick={() => onAdd(stock)} variant="primary">
+                Agregar al carrito
+            </Button>
         </div>
     );
 };

@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
+import { Link } from 'react-router-dom';
 import ItemCount from './ItemCount';
 
 const ItemDetail = ({ producto }) => {
+    const [units, setUnits] = useState(0);
+
+    const onAdd = (cuantity) => {
+        setUnits(cuantity);
+    };
+
     return (
         <Container>
             <div className="detail-container">
@@ -12,7 +20,17 @@ const ItemDetail = ({ producto }) => {
                         {producto.description}
                     </h2>
                     <h3>Precio: ${producto.price}</h3>
-                    <ItemCount initialStock={1} maxLimit={producto.stock} />
+                    {!units ? (
+                        <ItemCount
+                            onAdd={onAdd}
+                            initialStock={1}
+                            maxLimit={producto.stock}
+                        />
+                    ) : (
+                        <Link to="/cart">
+                            <Button variant="primary">Ir al carrito</Button>
+                        </Link>
+                    )}
                 </div>
                 <div className="right-column">
                     <img

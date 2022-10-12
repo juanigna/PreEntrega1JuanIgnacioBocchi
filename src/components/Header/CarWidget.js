@@ -1,6 +1,6 @@
 import React from 'react';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import '../App.css';
+import '../../App.css';
 
 const CarWidget = () => {
     return (

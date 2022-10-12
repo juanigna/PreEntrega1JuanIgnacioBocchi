@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Item from './Item';
 import Spinner from 'react-bootstrap/Spinner';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import stock from './mock/stock';
+import stock from '../mock/stock';
 import { useParams } from 'react-router-dom';
 
 const ItemList = () => {

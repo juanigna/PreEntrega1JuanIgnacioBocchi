@@ -1,8 +1,9 @@
 import './App.css';
-import ItemDetailContainer from './components/ItemDetailContainer';
-import ItemListContainer from './components/ItemListContainer';
-import NavBar from './components/NavBar';
+import ItemDetailContainer from './components/Main/ItemDetailContainer';
+import ItemListContainer from './components/Main/ItemListContainer';
+import NavBar from './components/Header/NavBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Form from './components/Form/Form';
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                         path="/item/:itemId"
                         element={<ItemDetailContainer />}
                     />
+                    <Route path="/form" element={<Form />} />
                 </Routes>
             </div>
         </BrowserRouter>
