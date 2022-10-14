@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
+
 import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
 import ItemCount from './ItemCount';
+import CartContext from '../../contexts/CartContext';
 
 const ItemDetail = ({ producto }) => {
     const [units, setUnits] = useState(0);
+    const { products, addToCart } = useContext(CartContext);
 
     const onAdd = (cuantity) => {
         setUnits(cuantity);
+        addToCart(producto, cuantity);
+        console.log(products);
     };
 
     return (

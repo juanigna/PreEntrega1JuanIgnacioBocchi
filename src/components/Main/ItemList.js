@@ -13,6 +13,7 @@ const ItemList = () => {
 
     useEffect(() => {
         setTimeout(() => {
+            setIsLoading(false);
             const getProducts = new Promise((resolve, reject) => {
                 const prodFiltrados = stock.filter(
                     (prod) => prod.category === categoryName
@@ -21,9 +22,8 @@ const ItemList = () => {
                 resolve(filtrados);
             }, []);
             getProducts.then((prod) => setProductos([...prod]));
-            setIsLoading(false);
         }, 2000);
-    }, [categoryName]);
+    }, [categoryName, productos]);
 
     return (
         <div className="d-flex ">

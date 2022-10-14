@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Logo from '../../assets/flower.png';
 import '../../App.css';
 import NavItem from './NavItem';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 //Componente encargado del NavBar
 
@@ -27,7 +27,9 @@ const NavBar = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="align-items-center ms-auto gap-3 me-3">
                             <NavItem />
-                            <CarWidget />
+                            <NavLink to="/cart">
+                                <CarWidget />
+                            </NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

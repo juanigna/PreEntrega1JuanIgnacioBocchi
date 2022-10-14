@@ -43,7 +43,7 @@ const stock = [
         id: 5,
         name: 'Frescor Ekos Pitanga Preta',
         description: 'Frescor Ekos Pitanga Preta 75ml',
-        price: 2.875,
+        price: 2875,
         prod_img:
             'https://res.cloudinary.com/dzcujelju/image/upload/v1665267793/perfume-frescor_dspays.jpg',
         category: 'perfumes',
