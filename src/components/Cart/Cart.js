@@ -6,12 +6,13 @@ import './style.css';
 const Cart = () => {
     const { cart, deleteFromCart } = useContext(CartContext);
     return (
-        <div className="cart-container">
+        <div className="cart-container-items">
             <h1 className="cart-title">Bienvenido al carrito!!!</h1>
             <div className="cart">
                 {cart.length !== 0 ? (
                     cart?.map((prods) => (
                         <div className="cart-item" key={prods.id}>
+                            <img src={prods.prod_img} alt={prods.name} />
                             <h3 className="cart-item-title">{prods.name}</h3>
                             <h3>${prods.price}</h3>
                             <h3>Cantidad: {prods.cantidad}</h3>

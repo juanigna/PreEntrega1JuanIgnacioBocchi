@@ -3,11 +3,13 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
-
+import { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Item.css';
+import CartContext from '../../contexts/CartContext';
 
 const Item = ({ products }) => {
+    const { addToCart } = useContext(CartContext);
     return (
         <Container>
             <div className="product-container gap-3">
@@ -26,7 +28,12 @@ const Item = ({ products }) => {
                             <Card.Title>{product.name}</Card.Title>
                             <Card.Text>{product.description}</Card.Text>
                             <Card.Text>${product.price}</Card.Text>
-                            <Button variant="primary">Comprar</Button>{' '}
+                            <Button
+                                onClick={() => addToCart(product, 1)}
+                                variant="primary"
+                            >
+                                Comprar
+                            </Button>{' '}
                             <Link to={`/item/${product.id}`}>
                                 <Button variant="secondary">
                                     Ver detalles

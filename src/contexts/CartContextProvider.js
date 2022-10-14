@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+
 import CartContext from './CartContext';
 
 const CartContextProvider = ({ children }) => {
