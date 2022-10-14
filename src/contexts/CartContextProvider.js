@@ -10,7 +10,8 @@ const CartContextProvider = ({ children }) => {
         const prod = { ...item, cantidad };
         const estaEnElCarrito = cart.some((prod) => prod.id === item.id);
         if (estaEnElCarrito) {
-            console.log('Ya ESTA MAN');
+            const newCart = cart.filter((prod) => (prod.cantidad += cantidad));
+            setCart([...newCart]);
         } else {
             setCart([...cart, prod]);
         }

@@ -31,4 +31,9 @@
     border-radius: 10px;
     padding: 1em;
     color: #000;
+    transition: all 0.3s ease;
+}
+.cart-item:hover {
+    transform: scale(1.09);
+    transition: all 0.3s ease;
 }
