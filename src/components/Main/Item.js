@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Item.css';
 import CartContext from '../../contexts/CartContext';
 
-const Item = ({ products }) => {
+const Item = React.memo(({ products }) => {
     const { addToCart } = useContext(CartContext);
     return (
         <Container>
@@ -45,6 +45,6 @@ const Item = ({ products }) => {
             </div>
         </Container>
     );
-};
+});
 
 export default Item;

@@ -1,0 +1,21 @@
+.cart {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    width: 100%;
+    grid-gap: 5px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    grid-auto-flow: dense;
+    place-content: center;
+}
+
+.card {
+    margin: 0 auto !important;
+    max-width: 18rem !important;
+}
+.card img {
+    max-height: 300px;
+    object-fit: contain;
+}
