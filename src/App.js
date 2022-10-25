@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Form from './components/Form/Form';
 import Cart from './components/Cart/Cart';
 import CartContextProvider from './contexts/CartContextProvider';
-
+import { ToastContainer } from 'react-toastify';
 function App() {
     return (
         <CartContextProvider>
@@ -35,6 +35,7 @@ function App() {
                         <Route path="/form" element={<Form />} />
                         <Route path="/cart" element={<Cart />} />
                     </Routes>
+                    <ToastContainer />
                 </div>
             </BrowserRouter>
         </CartContextProvider>

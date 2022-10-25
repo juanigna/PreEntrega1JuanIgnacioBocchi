@@ -4,7 +4,6 @@ import Container from 'react-bootstrap/Container';
 import ItemList from './ItemList';
 
 //Componente que muestra un saludo mediante una prop
-
 const ItemListContainer = ({ greeting }) => {
     return (
         <>
