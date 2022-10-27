@@ -8,6 +8,7 @@ const CartContextProvider = ({ children }) => {
     const initalCart =
         JSON.parse(window.localStorage.getItem('cartData')) || [];
     const [cart, setCart] = useState(initalCart);
+    const [cartTotal, setCartTotal] = useState(0);
 
     const Msg = ({ closeToast, toastProps, item, cantidad }) => (
         <div>
@@ -41,6 +42,14 @@ const CartContextProvider = ({ children }) => {
         window.localStorage.setItem('cartData', JSON.stringify(cart));
     }, [cart]);
 
+    const total = cart.reduce((val, acc) => {
+        return val + acc.price * acc.cantidad;
+    }, 0);
+
+    useEffect(() => {
+        setCartTotal(total);
+    }, [total, cartTotal]);
+
     //Funcion encargada de eliminar un item del carrito
     const deleteFromCart = (id) => {
         const cartFilter = cart.filter((prod) => prod.id !== id);
@@ -48,7 +57,9 @@ const CartContextProvider = ({ children }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cart, addToCart, deleteFromCart }}>
+        <CartContext.Provider
+            value={{ cart, addToCart, deleteFromCart, cartTotal, setCart }}
+        >
             {children}
         </CartContext.Provider>
     );

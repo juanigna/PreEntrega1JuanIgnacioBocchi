@@ -1,0 +1,11 @@
+.error {
+    outline: 2px solid red;
+    border: none;
+    border-radius: 13px;
+}
+
+input {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}

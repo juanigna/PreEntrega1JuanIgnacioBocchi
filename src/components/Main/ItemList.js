@@ -9,7 +9,6 @@ import { collection, getDocs, query, where } from 'firebase/firestore';
 const ItemList = React.memo(() => {
     const [productos, setProductos] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [stock, setStock] = useState([]);
     const { categoryName } = useParams();
 
     useEffect(() => {
@@ -56,12 +55,3 @@ const ItemList = React.memo(() => {
 });
 
 export default ItemList;
-// setTimeout(() => {
-//     setIsLoading(false);
-//     const getProducts = new Promise((resolve, reject) => {
-//
-//
-//         resolve(filtrados);
-//     }, []);
-//     getProducts.then((prod) => setProductos([...prod]));
-// }, 2000);
