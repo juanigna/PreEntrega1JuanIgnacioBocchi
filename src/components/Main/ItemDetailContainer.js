@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import stock from '../mock/stock';
 import '../../App.css';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
